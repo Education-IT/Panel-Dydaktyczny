@@ -1,0 +1,127 @@
+
+
+.contact_form {
+    width: 80%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: auto;
+    padding: 20px;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 3px;
+    text-align: center;
+
+}
+
+hr {
+    border: 2px solid #121227;
+    background-color: #121227;
+    margin-top: 0px;
+}
+
+a:link {
+    color: #121227;
+    font-weight: bolder;
+    text-decoration: none;
+    font-style: italic;
+}
+
+a:hover {
+
+
+    text-decoration: underline;
+
+}
+
+a:active {
+    color: blue;
+}
+
+
+fieldset {
+    border: 3px solid #121227;
+    color: #121227;
+    text-align: center;
+}
+
+
+
+input {
+    border-radius: 6px;
+    width: 60%;
+    font-size: 16px;
+    border: 2px solid #121227;
+    font-style: italic;
+    color: #121227;
+}
+
+textarea {
+    width: 60%;
+    border-radius: 6px;
+    border: 2px solid #121227;
+    resize: none;
+}
+
+button {
+    font-size: 24px;
+    font-style: italic;
+    width: 60%;
+    height: 60px;
+    border-radius: 12px;
+    margin-bottom: 6px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #121227;
+    color: white;
+}
+
+.buttons {
+
+    display: flex;
+
+}
+
+.left_button {
+    width: 49%;
+    text-align: center;
+}
+
+#email_subject {
+    width: 60%;
+}
+
+.right_button {
+    width: 49%;
+
+    text-align: center;
+
+}
+
+.link_indexhtml {
+    text-align: center;
+    padding-top: 20px;
+    font-style: italic;
+}
+
+#dane_kontaktowe {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+footer {
+    margin-top: 18px;
+    color: #121227;
+    display: flex;
+
+}
+

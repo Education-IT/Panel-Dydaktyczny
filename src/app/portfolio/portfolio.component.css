@@ -1,0 +1,325 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.button {
+    width: 200px;
+    height: 40px;
+    background-color: rgb(16, 31, 192);
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 20px;
+    transition: 0.5s;
+    font-size: 22px;
+}
+
+.button:hover {
+    background-color: rgb(0, 115, 255);
+}
+
+.button:active {
+    background-color: rgb(0, 174, 255);
+    color: black;
+}
+
+.button a {
+    color: white;
+    text-decoration: none;
+}
+
+.button a:hover {
+    color: white;
+}
+
+
+
+
+h1,
+p {
+    margin: 10px;
+}
+
+p {
+    font-size: 18px;
+}
+
+#me {
+    margin-left: 65px;
+    margin-bottom: 280px;
+}
+
+svg {
+    fill: white;
+    transition: 1s;
+    width: 50px;
+    height: 50px;
+
+}
+
+svg:hover {
+    fill: rgb(0, 115, 255);
+}
+
+svg:active {
+    fill: rgb(0, 174, 255);
+}
+
+#me_area {
+    margin-top: 85px;
+    display: block;
+    color: #fefefe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #121227;
+}
+
+#socials {
+    padding-bottom: 280px;
+
+}
+
+.social {
+
+    margin: 30px;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: #11101b;
+
+}
+
+label.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #fefefe;
+    padding: 0 20px;
+    font-weight: bold;
+    line-height: 80px;
+}
+
+
+
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
+
+}
+
+nav ul li a {
+
+    color: #f4eded;
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 10px;
+    border-radius: 3px;
+    position: relative;
+    display: inline-flex;
+}
+
+a:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(100, 170, 194);
+    height: 4px;
+    width: 0;
+    left: 0;
+    bottom: 20px;
+    transition: 0.4s;
+
+}
+
+nav a:hover:after {
+    width: 100%;
+
+}
+
+
+.checkbtn {
+    font-size: 30px;
+    display: none;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    line-height: 80px;
+    display: none;
+}
+
+#check {
+
+    display: none;
+}
+
+@media (max-width:2222px) {
+    #me_area {
+        padding: 78px;
+    }
+
+    label.logo {
+        font-size: 40px;
+        padding-left: 80px;
+    }
+
+    svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    nav ul li a {
+        font-size: 30px;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    p {
+        font-size: 40px;
+    }
+
+}
+
+
+@media (max-width:950px) {
+    label.logo {
+        font-size: 32.5px;
+        padding-left: 60px;
+    }
+
+    #me_area {
+        padding: 60px;
+    }
+
+    svg {
+        width: 70px;
+        height: 70px;
+    }
+
+
+    nav ul li a {
+        font-size: 25px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width:870px) {
+    label.logo {
+        font-size: 24px;
+        padding-left: 38px;
+    }
+
+    #me_area {
+        padding: 25px;
+    }
+
+    svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .checkbtn {
+        display: block;
+
+    }
+
+    #me_area {
+        padding: 0px;
+    }
+
+    svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+
+    ul {
+        position: fixed;
+        width: 97.5%;
+        margin-top: 10px;
+
+        background: #072348;
+        top: 78px;
+        left: -100%;
+        text-align: center;
+        transition: all .6s;
+
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0px;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    a:after {
+        content: "";
+        position: absolute;
+        background-color: rgb(100, 170, 194);
+        height: 4px;
+        width: 0;
+        left: 0;
+        bottom: 0px;
+        transition: 0.5s;
+
+    }
+
+    #check:checked~ul {
+        left: 1.25%;
+
+    }
+}

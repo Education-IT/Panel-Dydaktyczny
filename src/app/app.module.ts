@@ -8,6 +8,10 @@ import { StudentViewComponent } from './student-view/student-view.component';
 import { TeacherViewComponent } from './teacher-view/teacher-view.component';
 import { LoginComponent } from './login/login.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContactComponent } from './contact/contact.component';
+import { HashLocationStrategy } from '@angular/common';
+import { LocationStrategy } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -16,13 +20,14 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     StudentViewComponent,
     TeacherViewComponent,
     LoginComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
