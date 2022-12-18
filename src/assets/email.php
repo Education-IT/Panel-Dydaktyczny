@@ -2,7 +2,7 @@
 
 #https://www.youtube.com/watch?v=6QkgXcRMTq0
 $Client_email = $_POST['client_email'];
-$Client_name = $_POST['clent_name'];
+$Client_name = $_POST['client_name'];
 $Subject = $_POST['email_subject'];
 $Message = $_POST['description'];
 $To = "krystian.osinski@education-it.pl";

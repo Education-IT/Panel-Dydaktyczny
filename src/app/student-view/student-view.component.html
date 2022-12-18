@@ -1,1 +1,13 @@
 <p>student-view works!</p>
+
+
+<div *ngIf="error">{{error}}</div>
+<div *ngIf="success">{{success}}</div>
+<div id="theList">
+  <h2 style="color: aliceblue;">The list:</h2>
+  <ul>
+    <li style="color:azure;" *ngFor="let item of subjetcs">{{item.Subject_summary}} <br> {{item.Subject_homework}} <br> {{item.Subject_name}}</li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,5 +1,3 @@
-
-
 .contact_form {
     width: 80%;
     background-color: white;
@@ -67,6 +65,7 @@ textarea {
     border-radius: 6px;
     border: 2px solid #121227;
     resize: none;
+    height: 200px;
 }
 
 button {
@@ -125,3 +124,63 @@ footer {
 
 }
 
+
+@media (min-width:250px) {
+
+    button {
+        font-size: 10px;
+    }
+
+    textarea {
+        height: 65px;
+    }
+
+}
+
+
+@media (min-width:360px) {
+
+    button {
+        font-size: 15px;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+}
+
+@media (min-width:450px) {
+
+    button {
+        font-size: 20px;
+    }
+
+    textarea {
+        height: 133px;
+    }
+}
+
+@media (min-width:720px) {
+
+    button {
+        font-size: 24px;
+
+    }
+
+    textarea {
+        height: 166px;
+    }
+
+}
+
+@media (min-width:900px) {
+
+    button {
+        font-size: 30px;
+    }
+
+    textarea {
+        height: 202px;
+    }
+}
