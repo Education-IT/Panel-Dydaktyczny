@@ -7,7 +7,7 @@ import { Subject } from './subject';
   providedIn: 'root'
 })
 export class SubjectService {
-  baseUrl = 'http://education-it.pl/api';
+  baseUrl = 'https://education-it.pl/api';
 
   constructor(private http: HttpClient) { }
 
@@ -18,4 +18,22 @@ export class SubjectService {
       })
     );
   }
+
+
+  store(subjects: Subject) {
+    return this.http.post(`${this.baseUrl}/store.php`, { data: subjects }).pipe(
+      map((res: any) => {
+        return res['data'];
+      })
+    );
+}
+
+update(subjects: Subject){
+  return this.http.put(`${this.baseUrl}/update.php`, { data: subjects });
+}
+
+
+
+
+
 }

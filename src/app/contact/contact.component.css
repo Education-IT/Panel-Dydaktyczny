@@ -1,6 +1,6 @@
 .contact_form {
     width: 80%;
-    background-color: white;
+    background-color: #fefefe;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
@@ -79,9 +79,23 @@ button {
 }
 
 button:hover {
+    
     background-color: #121227;
-    color: white;
+    color: #fefefe;
 }
+
+.left_button button:active {
+    transition-duration: 0.0s;
+    background-color: #025d06;
+    color: #fefefe;
+}
+
+.right_button button:active {
+    transition-duration: 0.0s;
+    background-color: #ab0505;
+    color: #fefefe;
+}
+
 
 .buttons {
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,7 +9,8 @@ import { Component } from '@angular/core';
 export class PortfolioComponent {
   FULL_NAME = "Krystian Osiński";
   PROFESSION ="Instruktor programowania";
-  COMPANY_NAME ="SkyBlue";
+  COMPANY_NAME ="Education-IT";
 
 
 }
+

@@ -1,5 +1,6 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
 // db credentials
 define('DB_HOST', 'education-it.pl');
 define('DB_USER', 'u184503022_EducationIT');

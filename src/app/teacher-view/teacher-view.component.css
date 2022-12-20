@@ -1,0 +1,311 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: sans-serif;
+
+}
+
+.nazwa_grupy_zajeciowej {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.BODY {
+    background-color: #bdbbc6;
+}
+
+.main {
+    width: 100%;
+    height: 107.4vh;
+    display: flex;
+    text-align: center;
+
+}
+
+.menu {
+    width: 20%;
+    background-color: #121227;
+
+}
+
+#logo {
+    color: #fefefe;
+    text-decoration: none;
+    font-size: 48px;
+    letter-spacing: 4px;
+    padding: 15px;
+    background-color: #121227;
+
+}
+
+h2 a {
+    color: #fefefe;
+    text-decoration: none;
+    background-color: #121227;
+}
+
+
+
+
+
+.menu>a {
+
+    text-decoration: none;
+    color: #fefefe;
+    font-size: 18px;
+    letter-spacing: 2px;
+    display: list-item;
+    padding: 20px;
+
+    border: 1.6px solid black;
+    cursor: pointer;
+}
+
+
+.menu>a:hover {
+    background-color: rgb(100, 170, 194);
+    transition: 0.5s;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+.body {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.body h2 {
+    margin-top: 0px;
+    color: #fefefe;
+    letter-spacing: 4px;
+    padding: 20px;
+    background-color: #121227;
+
+}
+
+button {
+    font-size: 25px;
+    font-style: italic;
+    width: 100%;
+    height: 100px;
+    border-radius: 12px;
+    transition-duration: 0.6s;
+    background-color: #121227;
+    color: #fefefe;
+}
+
+button:hover {
+    background-color: #fefefe;
+    color: #121227;
+}
+
+.left button:active {
+    transition-duration: 0.0s;
+    background-color: #025d06;
+    color: #fefefe;
+}
+
+.right button:active {
+    transition-duration: 0.0s;
+    background-color: #ab0505;
+    color: #fefefe;
+}
+
+
+
+.body h3 {
+    margin-top: 40px;
+    color: #fefefe;
+    letter-spacing: 4px;
+    padding: 20px;
+    background-color: #121227;
+
+}
+
+.body h1 {
+    font-size: 35px;
+    padding: 15px;
+    letter-spacing: 4px;
+
+}
+
+.body hr {
+    font-size: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: 3px solid #121227;
+    background-color: #121227;
+}
+
+
+
+.body #student a:link {
+    text-decoration: none;
+    color: #0c0c94;
+    font-weight: bold;
+
+
+}
+
+.body #student a:hover {
+
+    text-decoration: underline;
+
+}
+
+.body #student a:active {
+    text-decoration: underline;
+
+}
+
+
+
+ul li {
+    display: inline-table;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+ul li ol li {
+    display: list-item;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+
+
+
+}
+
+.left {
+    text-align: center;
+
+    width: 40%;
+
+}
+
+.right {
+    text-align: center;
+
+    width: 40%;
+
+
+}
+
+pre {
+    text-align: left;
+    max-width: 600px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}
+
+p {
+    margin-top: 15px;
+    margin-left: 20px;
+    max-width: 600px;
+    word-wrap: break-word;
+    white-space: pre-line;
+    font-family: sans-serif;
+    font-size: 17px;
+
+}
+
+.summary {
+    border-left: solid 3px #121227;
+    border-color: #0c0c94;
+    border-width: 5px 10px;
+    text-align: left;
+    max-width: 550px;
+}
+
+.homework {
+    border-left: solid 3px #121227;
+    border-color: #0c0c94;
+    border-width: 5px 10px;
+    max-width: 550px;
+}
+
+span {
+
+    font-weight: bold;
+    font-size: 25px;
+    border-bottom: 3px solid #121227;
+    margin-top: 25px;
+
+}
+
+ol li {
+
+    margin-left: 30px;
+    list-style: decimal;
+    padding: 5px;
+
+}
+
+ol li a {
+
+    text-decoration: none;
+
+}
+
+ol li a:hover {
+
+    text-decoration: underline;
+
+}
+
+textarea {
+    margin-top: 15px;
+    width: 400px;
+    height: 200px;
+    border-radius: 6px;
+    border: 2px solid #121227;
+    align-self: center;
+}
+
+label {
+    margin-right: 12px;
+    margin-bottom: 20px;
+
+}
+
+.input {
+    display: list-item;
+}
+
+input {
+    border-radius: 6px;
+    border: 2px solid #121227;
+}
+
+fieldset {
+    border: 3.5px solid #121227;
+    color: #121227;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    max-width: 600px;
+
+}
+
+.btn {
+    max-width: 420px;
+}
+
+.btn:active {
+    background-color: #025d06;
+    transition-duration: 0.0s;
+    color: #fefefe;
+}
+
+.container p {
+    margin-left: 0px;
+}

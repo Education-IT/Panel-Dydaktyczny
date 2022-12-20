@@ -11,7 +11,7 @@
     width: 200px;
     height: 40px;
     background-color: rgb(16, 31, 192);
-    color: white;
+    color: #fefefe;
     border-radius: 20px;
     text-align: center;
     margin-top: 20px;
@@ -29,12 +29,12 @@
 }
 
 .button a {
-    color: white;
+    color: #fefefe;
     text-decoration: none;
 }
 
 .button a:hover {
-    color: white;
+    color: #fefefe;
 }
 
 
@@ -55,7 +55,7 @@ p {
 }
 
 svg {
-    fill: white;
+    fill: #fefefe;
     transition: 1s;
     width: 50px;
     height: 50px;
@@ -126,7 +126,7 @@ nav ul li {
 
 nav ul li a {
 
-    color: #f4eded;
+    color: #fefefe;
     font-weight: bold;
     font-size: 17px;
     text-transform: uppercase;
@@ -135,6 +135,8 @@ nav ul li a {
     position: relative;
     display: inline-flex;
 }
+
+
 
 a:after {
     content: "";
@@ -147,6 +149,8 @@ a:after {
     transition: 0.4s;
 
 }
+
+
 
 nav a:hover:after {
     width: 100%;
@@ -170,6 +174,35 @@ nav a:hover:after {
 }
 
 @media (max-width:2222px) {
+    #me_area {
+        padding: 78px;
+    }
+
+    label.logo {
+        font-size: 50px;
+        padding-left: 80px;
+    }
+
+    svg {
+        width: 90px;
+        height: 90px;
+    }
+
+    nav ul li a {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    p {
+        font-size: 50px;
+    }
+
+}
+
+@media (max-width:1500px) {
     #me_area {
         padding: 78px;
     }
@@ -199,7 +232,7 @@ nav a:hover:after {
 }
 
 
-@media (max-width:950px) {
+@media (max-width:1050px) {
     label.logo {
         font-size: 32.5px;
         padding-left: 60px;
@@ -258,7 +291,7 @@ nav a:hover:after {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 624px) {
     .checkbtn {
         display: block;
 

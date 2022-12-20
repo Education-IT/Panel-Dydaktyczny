@@ -1,1 +1,357 @@
-<p>teacher-view works!</p>
+<div class="BODY">
+
+  <!--<div *ngIf="error">{{error}}</div>
+<div *ngIf="success">{{success}}</div>
+<div id="theList">
+  <h2 style="color: aliceblue;">The list:</h2>
+  <ul>
+    <li style="color:azure;" *ngFor="let item of subjetcs">{{item.Subject_summary}} <br> {{item.Subject_homework}} <br> {{item.Subject_name}}</li>
+  </ul>
+</div>
+-->
+  <div id="head" class="main" style="height: 152.4vh">
+    <div class="menu">
+      <h2 id="logo"><a routerLink="../portfolio">Menu</a></h2>
+      <a (click)="code(-1)">Gotowe programy</a>
+      <a style="background-color: #0c0c94;" (click)="code(-2)">Dodaj podsumowanie</a>
+
+      <a *ngFor="let item of subjetcs" (click)="code(item.Subject_number)">{{item.Subject_number}}.
+        {{item.Subject_name}}</a>
+
+    </div>
+    <div class="body">
+      <hr>
+      <h1 *ngIf="numer != -2" class="nazwa_grupy_zajeciowej">Education-IT<img src="../../assets/logo-img.png" alt=""
+          height="35px" width="30px"></h1>
+      <h1 *ngIf="numer == -2" class="nazwa_grupy_zajeciowej">Education-IT<img src="../../assets/logo-img.png" alt=""
+          height="35px" width="30px"></h1>
+      <hr>
+
+      <div *ngIf="numer != -1 && numer!=ile  && numer != -2 && numer != -3 ">
+        <fieldset>
+          <legend> Podsumowanie </legend>
+          <div *ngIf="UPDATE == 0">
+
+            <h2 id="imie_nazwisko">{{subjetcs[numer].Subject_number}}. {{subjetcs[numer].Subject_name}}</h2>
+            <br>
+            <span>Podsumowanie zajęć:</span>
+
+            <div class="summary">
+              <pre><p>{{subjetcs[numer].Subject_summary}}</p></pre>
+            </div>
+
+            <br><br>
+
+            <span>Wyzwanie domowe:</span>
+            <div class="homework">
+              <pre><p>{{subjetcs[numer].Subject_homework}}</p></pre>
+            </div>
+
+
+
+
+            <ul>
+              <li class="left"><b><button (click)="update()">Zaktualizuj</button></b>
+
+              </li>
+
+              <li class="right"><b><button (click)="update()">Usuń</button></b>
+
+              </li>
+            </ul>
+          </div>
+
+
+          <div *ngIf="UPDATE == 1" id="theList">
+            <h2>{{subjetcs[numer].Subject_number}}. {{subjetcs[numer].Subject_name}}</h2>
+
+            <div class="container">
+
+
+              <p><label>Numer Lekcji: </label>
+                <input type="number" [(ngModel)]="subjetcs[numer].Subject_number" class="form-control" required
+                  #Subject_number="ngModel">
+              </p>
+
+
+              <p><label>Temat Lekcji: </label>
+                <input type="text" [(ngModel)]="subjetcs[numer].Subject_name" class="form-control" required
+                  #Subject_name="ngModel">
+              </p>
+
+
+              <p><span>Podsumowanie zajęć: </span>
+                <textarea type="text" [(ngModel)]="subjetcs[numer].Subject_summary" class="form-control" required
+                  #Subject_summary="ngModel"></textarea>
+              </p>
+
+
+              <p><span>Wyzwanie domowe: </span>
+                <textarea type="text" [(ngModel)]="subjetcs[numer].Subject_homework" class="form-control" required
+                  #Subject_homework="ngModel"></textarea>
+              </p>
+
+              <button value="Update" class="btn"
+                (click)="updateSubject(Subject_number, Subject_name, Subject_summary, Subject_homework)">
+                Aktualizuj</button>
+
+            </div>
+            <ul>
+              <li class="left"><b><button (click)="update()">Zaktualizuj</button></b>
+
+              </li>
+
+              <li class="right"><b><button (click)="update()">Usuń</button></b>
+
+              </li>
+            </ul>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+
+
+      <div *ngIf="numer == ile">
+
+        <fieldset>
+          <legend> Podsumowanie </legend>
+          <div *ngIf="UPDATE == 0">
+
+            <h2 id="imie_nazwisko">{{subjetcs[ile].Subject_number}}. {{subjetcs[ile].Subject_name}}</h2>
+            <br>
+            <span>Podsumowanie zajęć:</span>
+
+            <div class="summary">
+              <pre><p>{{subjetcs[ile].Subject_summary}}</p></pre>
+            </div>
+
+            <br><br>
+
+            <span>Wyzwanie domowe:</span>
+            <div class="homework">
+              <pre><p>{{subjetcs[ile].Subject_homework}}</p></pre>
+            </div>
+
+            <ul>
+              <li class="left"><b><button (click)="update()">Zaktualizuj</button></b>
+
+              </li>
+
+              <li class="right"><b><button (click)="update()">Usuń</button></b>
+
+              </li>
+            </ul>
+          </div>
+
+          <div *ngIf="UPDATE == 1" id="theList">
+            <h2>{{subjetcs[numer].Subject_number}}. {{subjetcs[numer].Subject_name}}</h2>
+
+            <div class="container">
+
+
+              <p><label>Numer Lekcji: </label>
+                <input type="number" [(ngModel)]="subjetcs[numer].Subject_number" class="form-control" required
+                  #Subject_number="ngModel">
+              </p>
+
+
+              <p><label>Temat Lekcji: </label>
+                <input type="text" [(ngModel)]="subjetcs[numer].Subject_name" class="form-control" required
+                  #Subject_name="ngModel">
+              </p>
+
+
+              <p><span>Podsumowanie zajęć: </span>
+                <textarea type="text" [(ngModel)]="subjetcs[numer].Subject_summary" class="form-control" required
+                  #Subject_summary="ngModel"></textarea>
+              </p>
+
+
+              <p><span>Wyzwanie domowe: </span>
+                <textarea type="text" [(ngModel)]="subjetcs[numer].Subject_homework" class="form-control" required
+                  #Subject_homework="ngModel"></textarea>
+              </p>
+
+
+              <button value="Update" class="btn"
+                (click)="updateSubject(Subject_number, Subject_name, Subject_summary, Subject_homework)">
+                Aktualizuj</button>
+
+
+              <ul>
+                <li class="left"><b><button (click)="update()">Powrót</button></b>
+
+                </li>
+
+                <li class="right"><b><button type="reset">Usuń</button></b>
+
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+
+
+
+
+        </fieldset>
+      </div>
+
+
+
+
+      <div *ngIf="numer == -1 &&  codes == 0">
+        <h2 id="imie_nazwisko">Gotowe programy w języku:</h2>
+        <br>
+        <div id="student">
+          <ul>
+            <li class="left"><b><button (click)="codeF(1)">MakeCode</button></b>
+
+            </li>
+
+            <li class="right"><b><button (click)="codeF(2)">Python</button></b>
+
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+
+      <div *ngIf="numer == -1 &&  codes == 1">
+        <h2 id="imie_nazwisko">Gotowe programy w języku MakeCode:</h2>
+        <br>
+        <div class="summary">
+          <p>Podręcznik 2:</p>
+          <ol>
+            <li><a href="../../assets/MakeCode/MakeCode-agentRace.mkcd" download>Wyścigi Agentów</a></li>
+            <li><a href="../../assets/MakeCode/MakeCode-babaJaga.mkcd" download>Raz, dwa, trzy - baba Jaga
+                patrzy!</a></li>
+            <li><a href="../../assets/MakeCode/MakeCode-chickenHunt.mkcd" download>Chicken Hunt</a></li>
+            <li><a href="../../assets/MakeCode/MakeCode-fallGuys.mkcd" download>Fall Guys</a></li>
+            <li><a href="../../assets/MakeCode/MakeCode-metropolia.mkcd" download>Nasza Metropolia</a></li>
+            <li><a href="../../assets/MakeCode/MakeCode-parkour.mkcd" download>Parkour</a></li>
+            <li><a href="../../assets/MakeCode/MakeCode-wulkan.mkcd" download>Wulkan</a></li>
+            <li><a href="../../assets/MakeCode/MakeCode-zegar.mkcd" download>Zegar</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <div *ngIf="numer == -1 &&  codes == 2">
+        <h2 id="imie_nazwisko">Gotowe programy w języku Python:</h2>
+        <br>
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div *ngIf="numer == -2 &&  codes == 0">
+
+        <fieldset>
+          <legend> Dodaj podsumowanie </legend>
+          <div id="theForm">
+
+            <form #f="ngForm" name="theForm" (submit)="addSubject(f)">
+              <div class="input">
+                <div class="form-group">
+                  <p><label>Numer lekcji:</label>
+                    <input style="width: 40px;" type="number" class="form-control" name="Subject_number"
+                      [(ngModel)]="subject.Subject_number" #Subject_number="ngModel">
+                  </p>
+
+                </div>
+
+                <div class="form-group">
+                  <p><label>Temat lekcji:</label>
+                    <input type="text" class="form-control" name="Subject_name" required
+                      [(ngModel)]="subject.Subject_name" #Subject_name="ngModel">
+                  </p>
+
+                </div>
+              </div>
+              <br>
+              <div class="form-group">
+                <span>Podsumowanie zajęć:</span><br>
+                <textarea type="text" class="form-control" name="Subject_summary" required
+                  [(ngModel)]="subject.Subject_summary" #Subject_name="ngModel"></textarea>
+
+              </div>
+              <br>
+              <div class="form-group">
+                <span>Wyzwanie domowe:</span><br>
+                <textarea type="text" class="form-control" name="Subject_homework" required
+                  [(ngModel)]="subject.Subject_homework" #Subject_name="ngModel"></textarea>
+
+              </div>
+
+
+
+              <div id="student">
+                <ul>
+                  <li class="left"><b><button class="btn btn-primary btn-sm">Dodaj</button></b>
+
+                  </li>
+
+                  <li class="right"><b><button type="reset" class="btn btn-primary btn-sm">Reset</button></b>
+
+                  </li>
+                </ul>
+
+              </div>
+
+
+
+            </form>
+          </div>
+        </fieldset>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <hr style="margin-top:100px">
+
+
+    </div>
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
