@@ -27,7 +27,7 @@
           height="35px" width="30px"></h1>
       <hr>
 
-      <div *ngIf="numer != -1 && numer!=ile  && numer != -2 && numer != -3 ">
+      <div *ngIf="numer != -1 && numer!=ile  && numer != -2 && numer != -3 && ile!=-1">
         <fieldset>
           <legend> Podsumowanie </legend>
           <div *ngIf="UPDATE == 0">
@@ -55,14 +55,14 @@
 
               </li>
 
-              <li class="right"><b><button (click)="update()">Usuń</button></b>
+              <li class="right"><b><button (click)="deleteSubject(subjetcs[numer].Subject_number)">Usuń</button></b>
 
               </li>
             </ul>
           </div>
 
 
-          <div *ngIf="UPDATE == 1" id="theList">
+          <div *ngIf="UPDATE == 1 && ile!=-1" id="theList">
             <h2>{{subjetcs[numer].Subject_number}}. {{subjetcs[numer].Subject_name}}</h2>
 
             <div class="container">
@@ -101,7 +101,7 @@
 
               </li>
 
-              <li class="right"><b><button (click)="update()">Usuń</button></b>
+              <li class="right"><b><button (click)="deleteSubject(subjetcs[numer].Subject_number)">Usuń</button></b>
 
               </li>
             </ul>
@@ -113,25 +113,25 @@
 
 
 
-      <div *ngIf="numer == ile">
+      <div *ngIf="numer == ile && ile!=-1">
 
         <fieldset>
           <legend> Podsumowanie </legend>
           <div *ngIf="UPDATE == 0">
 
-            <h2 id="imie_nazwisko">{{subjetcs[ile].Subject_number}}. {{subjetcs[ile].Subject_name}}</h2>
+            <h2 id="imie_nazwisko">{{subjetcs[numer].Subject_number}}. {{subjetcs[numer].Subject_name}}</h2>
             <br>
             <span>Podsumowanie zajęć:</span>
 
             <div class="summary">
-              <pre><p>{{subjetcs[ile].Subject_summary}}</p></pre>
+              <pre><p>{{subjetcs[numer].Subject_summary}}</p></pre>
             </div>
 
             <br><br>
 
             <span>Wyzwanie domowe:</span>
             <div class="homework">
-              <pre><p>{{subjetcs[ile].Subject_homework}}</p></pre>
+              <pre><p>{{subjetcs[numer].Subject_homework}}</p></pre>
             </div>
 
             <ul>
@@ -139,13 +139,13 @@
 
               </li>
 
-              <li class="right"><b><button (click)="update()">Usuń</button></b>
+              <li class="right"><b><button (click)="deleteSubject(subjetcs[numer].Subject_number)">Usuń</button></b>
 
               </li>
             </ul>
           </div>
 
-          <div *ngIf="UPDATE == 1" id="theList">
+          <div *ngIf="UPDATE == 1 && ile!=-1" id="theList">
             <h2>{{subjetcs[numer].Subject_number}}. {{subjetcs[numer].Subject_name}}</h2>
 
             <div class="container">
@@ -185,7 +185,7 @@
 
                 </li>
 
-                <li class="right"><b><button type="reset">Usuń</button></b>
+                <li class="right"><b><button type="deleteSubject(subjetcs[numer].Subject_number)">Usuń</button></b>
 
                 </li>
               </ul>

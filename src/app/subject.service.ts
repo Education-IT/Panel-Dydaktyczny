@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Subject } from './subject';
 
@@ -32,7 +32,12 @@ update(subjects: Subject){
   return this.http.put(`${this.baseUrl}/update.php`, { data: subjects });
 }
 
+delete(Subject_number: any) {
+  const params = new HttpParams()
+    .set('Subject_number', Subject_number.toString());
 
+  return this.http.delete(`${this.baseUrl}/delete.php`, { params: params });
+}
 
 
 

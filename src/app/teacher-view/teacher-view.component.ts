@@ -17,7 +17,7 @@ export class TeacherViewComponent implements OnInit {
   numer = 4;
   ile = 0;
   codes = 0;
-  next = 0;
+  
   UPDATE = 0;
 
   constructor(private subjectService: SubjectService) {
@@ -32,13 +32,13 @@ export class TeacherViewComponent implements OnInit {
       (data: Subject[]) => {
         this.subjetcs = data;
         this.success = 'successful retrieval of the list';
-        console.log(data.length);
+
         this.ile = data.length - 1;
         this.numer = this.ile;
-        this.next = this.ile + 2;
+        
       },
       (err) => {
-        console.log(err);
+
         this.error = err;
       }
     );
@@ -88,8 +88,35 @@ export class TeacherViewComponent implements OnInit {
       );
   }
 
+  deleteSubject(id: number) {
+
+    if (confirm("Do you want to delete that subject?") == true) {
+      this.resetAlerts();
+      this.subjectService.delete(id).subscribe(
+        (res) => {
+          this.subjetcs = this.subjetcs.filter(function (item) {
+            return item['Subject_number'] && +item['Subject_number'] !== +id;
+          });
+
+          this.success = 'Deleted successfully';
+          alert(this.success);
+          window.location.reload();
+
+        },
+        (err) => {
+          this.error = err;
+          alert(this.error);
+        }
+      );
+    } else {
+      alert("operation canceled!");
+    }
+
+
+  }
+
   code(x: number): void {
-    console.log(x);
+    
     if (x == -1) {
       this.numer = -1;
       this.codes = 0;
@@ -106,7 +133,7 @@ export class TeacherViewComponent implements OnInit {
       }
     }
 
-    console.log(this.numer);
+
   }
 
   codeF(x: number): void {
