@@ -13,6 +13,9 @@ import { ContactComponent } from './contact/contact.component';
 import { HashLocationStrategy } from '@angular/common';
 import { LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { SubjectService } from './subject.service';
+import { GiphyService } from './giphy.service';
+import { NasaService } from './nasa.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},SubjectService,GiphyService,NasaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

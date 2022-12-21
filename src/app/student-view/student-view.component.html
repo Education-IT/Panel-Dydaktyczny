@@ -13,6 +13,7 @@
     <div class="menu">
       <h2 id="logo"><a routerLink="../portfolio">Menu</a></h2>
       <a (click)="code(-1)">Gotowe programy</a>
+      <a style="background-color: rgb(194, 156, 19);" (click)="getRandomGIF()">Gif :)</a>
       <a *ngFor="let item of subjetcs" (click)="code(item.Subject_number)">{{item.Subject_number}}.
         {{item.Subject_name}}</a>
 
@@ -38,6 +39,7 @@
         <div class="homework">
           <pre><p>{{subjetcs[numer].Subject_homework}}</p></pre>
         </div>
+        <div class="gif" *ngIf="url != undefined"><img src="{{url}}"></div>
 </fieldset>
       </div>
 
@@ -61,6 +63,7 @@
         <div class="homework">
           <pre><p>{{subjetcs[ile].Subject_homework}}</p></pre>
         </div>
+        <div class="gif" *ngIf="url != undefined"><img src="{{url}}"></div>
 </fieldset>
       </div>
 
@@ -82,6 +85,7 @@
           </ul>
 
         </div>
+        <div class="gif" *ngIf="url != undefined"><img src="{{url}}"></div>
       </div>
 
 

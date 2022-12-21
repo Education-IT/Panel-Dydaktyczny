@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GiphyService } from '../giphy.service';
 import { Subject } from '../subject';
 import { SubjectService } from '../subject.service';
 
@@ -15,12 +16,16 @@ export class StudentViewComponent implements OnInit{
   numer = 4;
   ile = 0;
   codes = 0;
+  public dataGIF: any;
+  public url:any;
   
-  constructor(private subjectService: SubjectService) {
+  
+  constructor(private subjectService: SubjectService , private giphyService: GiphyService) {
   }
-        
+  
   ngOnInit() {
     this.getSubjects();
+    
   }
         
   getSubjects(): void {
@@ -28,7 +33,7 @@ export class StudentViewComponent implements OnInit{
       (data: Subject[]) => {
         this.subjetcs = data;
         this.success = 'successful retrieval of the list';
-        console.log(data.length);//usuń mnie lub zmień
+        
         this.ile = data.length -1;
         this.numer = this.ile;
       },
@@ -41,7 +46,7 @@ export class StudentViewComponent implements OnInit{
   }
 
   code(x:number) : void{
-    console.log(x);
+    
     if (x == -1){
         this.numer = -1;
         this.codes = 0;
@@ -50,7 +55,7 @@ export class StudentViewComponent implements OnInit{
         this.numer = Number(x)-1;
     }
     
-    console.log(this.numer);
+   
   }
 
   codeF(x: number) : void{
@@ -63,6 +68,14 @@ export class StudentViewComponent implements OnInit{
 
   }
  
+ getRandomGIF(): void
+{
+  this.giphyService.getGIF().subscribe((data: any) => {
+    this.dataGIF = data;
+    console.log(this.dataGIF);
+    this.url = this.dataGIF.data.images.downsized.url;});
+  
+}
 
 }
 
