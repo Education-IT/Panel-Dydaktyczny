@@ -8,7 +8,9 @@ Projekt ten jest na co dzień przeze mnie wykorzystywany do pracy dydaktycznej z
 
 Moja strona zawiera również proste REST API. umożliwiające mi działania CRUD na bazie danych. Backend aplikacji napisany jest w języku PHP.   
 
-Stronę traktuję również jako skromną wizytówkę. Zapraszam do odwiedzenia -> [ ![MyWebSite](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://education-it.pl/) <-Umożliwiaj rodzicom czy uczniom wysłanie w prosty sposób maila do mnie poprzez formularz na stronie.
+Stronę traktuję również jako skromną wizytówkę. Zapraszam do odwiedzenia -> [ ![MyWebSite](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://education-it.pl/) <-
+
+Umożliwia rodzicom czy uczniom wysłanie w prosty sposób maila do mnie poprzez formularz na stronie.
 
 **Stos technologiczny:**
 
