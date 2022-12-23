@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { GiphyService } from '../services/giphy.service';
+import { GiphyService } from '../giphy.service';
 import { Subject } from '../subject';
-import { SubjectService } from '../services/subject.service';
+import { SubjectService } from '../subject.service';
 
 @Component({
   selector: 'app-student-view',
