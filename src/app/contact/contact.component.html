@@ -1,86 +1,65 @@
-
-
-    <div class="contact_form">
-        <hr>
-        <header>
-            <h1>Kontakt</h1>
-        </header>
-        <hr>
-        <main>
-            <section>
-                <article id="dane_kontaktowe">
-                    <ul>
-                        <li>
-                            E-mail: <a
-                                href="mailto:krystian.osinski@education-it.pl">{{EMAIL}}</a>
-
-                        </li>
-                        <li>
-                            Telefon: <a href="tel:+48504-960-083">{{PHONE_NUMBER}}</a>
-                        </li>
-                        <li>
-                            Wideokonferencja Zoom (po wcześniejszym umówieniu się)
-                        </li>
-
-
-                    </ul>
-
-                </article>
-
-                <article>
-
-                    <form action="../../assets/email.php" method="post">
-                        <fieldset>
-                            <legend>Napisz do mnie</legend>
-                            <p>
-                                <!-- <label for="client_email">Twój email: </label> -->
-                                <input type="email" id="client_email" name="client_email" required
-                                    placeholder="Twój email: ">
-                            </p>
-
-                            <p>
-                                <!-- <label for="client_name">Twoje imie: </label> -->
-                                <input type="text" id="client_name" name="client_name" required
-                                    placeholder="Twoje imie: ">
-                            </p>
-
-                            <p>
-                                <!-- <label for="email_subject">Temat: </label> -->
-                                <input type="text" id="email_subject" name="email_subject" required
-                                    placeholder="Temat: ">
-                            </p>
-
-                            <p id="des">
-                                <label for="description">Treść: </label><br>
-                                <textarea name="description" id="description" cols="30" rows="10"></textarea>
-                            </p>
-
-                            <div class="buttons">
-                                <div class="left_button">
-                                    <button type="submit">Wyślij</button>
-                                </div>
-                                <div class="right_button">
-                                    <button type="reset">Resetuj</button>
-                                </div>
+<div class="contact_form">
+    <hr>
+    <header>
+        <h1>Kontakt</h1>
+    </header>
+    <hr>
+    <main>
+        <section>
+            <article id="dane_kontaktowe">
+                <ul>
+                    <li>
+                        E-mail: <a href="mailto:krystian.osinski@education-it.pl">{{EMAIL}}</a>
+                    </li>
+                    <li>
+                        Telefon: <a href="tel:+48504-960-083">{{PHONE_NUMBER}}</a>
+                    </li>
+                    <li>
+                        Wideokonferencja Zoom (po wcześniejszym umówieniu się)
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <form action="../../assets/email.php" method="post">
+                    <fieldset>
+                        <legend>Napisz do mnie</legend>
+                        <p>
+                            <!-- <label for="client_email">Twój email: </label> -->
+                            <input type="email" id="client_email" name="client_email" required
+                                placeholder="Twój email: ">
+                        </p>
+                        <p>
+                            <!-- <label for="client_name">Twoje imie: </label> -->
+                            <input type="text" id="client_name" name="client_name" required placeholder="Twoje imie: ">
+                        </p>
+                        <p>
+                            <!-- <label for="email_subject">Temat: </label> -->
+                            <input type="text" id="email_subject" name="email_subject" required placeholder="Temat: ">
+                        </p>
+                        <p id="des">
+                            <label for="description">Treść: </label><br>
+                            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                        </p>
+                        <div class="buttons">
+                            <div class="left_button">
+                                <button type="submit">Wyślij</button>
                             </div>
-                        </fieldset>
-                    </form>
-
-                    <footer>
-                        <div class="left_button">
-                            <a href="javascript:history.back(-1)" style="color:rgb(16, 31, 192);">Poprzednia strona</a>
+                            <div class="right_button">
+                                <button type="reset">Resetuj</button>
+                            </div>
                         </div>
-                        <div class="right_button">
-                            <a routerLink="../portfolio" style="color:rgb(16, 31, 192);">Strona główna</a>
-                        </div>
-                    </footer>
-                </article>
-            </section>
-        </main>
-
-
-    </div>
-
-    <router-outlet></router-outlet>
-
-
+                    </fieldset>
+                </form>
+                <footer>
+                    <div class="left_button">
+                        <a href="javascript:history.back(-1)" style="color:rgb(16, 31, 192);">Poprzednia strona</a>
+                    </div>
+                    <div class="right_button">
+                        <a routerLink="../portfolio" style="color:rgb(16, 31, 192);">Strona główna</a>
+                    </div>
+                </footer>
+            </article>
+        </section>
+    </main>
+</div>
+<router-outlet></router-outlet>

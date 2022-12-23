@@ -3,6 +3,4 @@ export interface Subject{
     Subject_name : string;
     Subject_summary : string;
     Subject_homework : string;
-    
-
 }

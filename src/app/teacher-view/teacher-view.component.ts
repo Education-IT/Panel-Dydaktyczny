@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from '../subject';
-import { SubjectService } from '../subject.service';
+import { SubjectService } from '../services/subject.service';
 import { NgForm } from '@angular/forms';
+import { LocalStorageService } from '../services/local-storage.service';
+import { AUTH_TOKEN_KEY } from '../services/local-storage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-teacher-view',
@@ -17,10 +20,10 @@ export class TeacherViewComponent implements OnInit {
   numer = 4;
   ile = 0;
   codes = 0;
-  
+
   UPDATE = 0;
 
-  constructor(private subjectService: SubjectService) {
+  constructor(private router: Router, private subjectService: SubjectService, private localStorageService: LocalStorageService) {
   }
 
   ngOnInit() {
@@ -35,7 +38,7 @@ export class TeacherViewComponent implements OnInit {
 
         this.ile = data.length - 1;
         this.numer = this.ile;
-        
+
       },
       (err) => {
 
@@ -116,7 +119,7 @@ export class TeacherViewComponent implements OnInit {
   }
 
   code(x: number): void {
-    
+
     if (x == -1) {
       this.numer = -1;
       this.codes = 0;
@@ -127,6 +130,7 @@ export class TeacherViewComponent implements OnInit {
         this.codes = 0;
         this.UPDATE = 0;
       }
+
       else {
         this.numer = Number(x) - 1;
         this.UPDATE = 0;
@@ -155,5 +159,10 @@ export class TeacherViewComponent implements OnInit {
     }
   }
 
+
+  mockLogout() {
+    this.localStorageService.removeItem(AUTH_TOKEN_KEY);
+    this.router.navigate(['portfolio'])
+  }
 
 }

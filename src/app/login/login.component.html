@@ -1,25 +1,21 @@
 <fieldset>
-    <legend>Logowanie do Panelu Dydaktycznego:</legend>
-<form action="/action_page.php" method="post">
-  <div class="imgcontainer">
-    <div *ngIf="url != undefined"><img src="{{url}}">
-    <p class="title"><span>Title:</span> {{dataNASA.title}}</p>
-    <p><span>Explanation:</span></p>
-    <p class="exp">{{dataNASA.explanation}}</p>
-  </div></div>
-  
-  
-  <div class="container">
+  <legend>Logowanie do Panelu Dydaktycznego:</legend>
+  <form #f="ngForm" name="theForm" (submit)="mockLogin(xlogin,xpassword)">
+    <div class="imgcontainer">
+      <div *ngIf="url != undefined"><img src="{{url}}">
+        <p class="title"><span>Title:</span> {{dataNASA.title}}</p>
+        <p><span>Explanation:</span></p>
+        <p class="exp">{{dataNASA.explanation}}</p>
+      </div>
+    </div>
+    <div class="container">
+      <p><input type="text" placeholder="Enter Username" name="uname" required [(ngModel)]="xlogin" login="ngModel"></p>
+      <p><input type="password" placeholder="Enter Password" name="psw" required [(ngModel)]="xpassword"
+          password="ngModel"></p>
 
-    <p><input type="text" placeholder="Enter Username" name="uname" required></p>
-    <p><input type="password" placeholder="Enter Password" name="psw" required></p>  
-    <p><button type="submit">Login</button></p>
-    <button routerLink="../portfolio" type="button" class="cancelbtn">Cancel</button>
-  </div>
+      <p><button>Login</button></p>
+      <button routerLink="../portfolio" type="button" class="cancelbtn">Cancel</button>
+    </div>
 
- 
-    
-   
-  
-</form>
+  </form>
 </fieldset>

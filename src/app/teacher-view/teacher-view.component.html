@@ -1,19 +1,11 @@
 <div class="BODY">
 
-  <!--<div *ngIf="error">{{error}}</div>
-<div *ngIf="success">{{success}}</div>
-<div id="theList">
-  <h2 style="color: aliceblue;">The list:</h2>
-  <ul>
-    <li style="color:azure;" *ngFor="let item of subjetcs">{{item.Subject_summary}} <br> {{item.Subject_homework}} <br> {{item.Subject_name}}</li>
-  </ul>
-</div>
--->
   <div id="head" class="main" style="height: 152.4vh">
     <div class="menu">
       <h2 id="logo"><a routerLink="../portfolio">Menu</a></h2>
       <a (click)="code(-1)">Gotowe programy</a>
       <a style="background-color: #0c0c94;" (click)="code(-2)">Dodaj podsumowanie</a>
+      <a style="background-color: #5b3dd1;" (click)="mockLogout()">Wylogowanie</a>
 
       <a *ngFor="let item of subjetcs" (click)="code(item.Subject_number)">{{item.Subject_number}}.
         {{item.Subject_name}}</a>
@@ -21,10 +13,9 @@
     </div>
     <div class="body">
       <hr>
-      <h1 *ngIf="numer != -2" class="nazwa_grupy_zajeciowej">Education-IT<img src="../../assets/logo-img.png" alt=""
-          height="35px" width="30px"></h1>
-      <h1 *ngIf="numer == -2" class="nazwa_grupy_zajeciowej">Education-IT<img src="../../assets/logo-img.png" alt=""
-          height="35px" width="30px"></h1>
+      <h1 class="nazwa_grupy_zajeciowej">Education-IT<img src="../../assets/logo-img.png" alt="" height="35px"
+          width="30px"></h1>
+
       <hr>
 
       <div *ngIf="numer != -1 && numer!=ile  && numer != -2 && numer != -3 && ile!=-1">
@@ -39,17 +30,11 @@
             <div class="summary">
               <pre><p>{{subjetcs[numer].Subject_summary}}</p></pre>
             </div>
-
             <br><br>
-
             <span>Wyzwanie domowe:</span>
             <div class="homework">
               <pre><p>{{subjetcs[numer].Subject_homework}}</p></pre>
             </div>
-
-
-
-
             <ul>
               <li class="left"><b><button (click)="update()">Zaktualizuj</button></b>
 
@@ -60,7 +45,6 @@
               </li>
             </ul>
           </div>
-
 
           <div *ngIf="UPDATE == 1 && ile!=-1" id="theList">
             <h2>{{subjetcs[numer].Subject_number}}. {{subjetcs[numer].Subject_name}}</h2>
@@ -109,10 +93,6 @@
 
         </fieldset>
       </div>
-
-
-
-
       <div *ngIf="numer == ile && ile!=-1">
 
         <fieldset>
@@ -192,16 +172,8 @@
             </div>
 
           </div>
-
-
-
-
-
         </fieldset>
       </div>
-
-
-
 
       <div *ngIf="numer == -1 &&  codes == 0">
         <h2 id="imie_nazwisko">Gotowe programy w języku:</h2>
@@ -243,25 +215,17 @@
       <div *ngIf="numer == -1 &&  codes == 2">
         <h2 id="imie_nazwisko">Gotowe programy w języku Python:</h2>
         <br>
-
+        <div class="summary">
+          <p>Grupa Python_001:</p>
+          <ol>
+            <li><a href="../../assets/PYTHON/funkcje.py" download>Funkcje - wprowadzenie.</a></li>
+            <li><a href="../../assets/PYTHON/klasy_obiekty_1.py" download>Klasy i Obiekty - wprowadzenie</a></li>
+            <li><a href="../../assets/PYTHON/klasy_obiekty2.py" download>Klasy i Obiekty - funkcja __init__</a></li>
+            
+          </ol>
+        </div>
 
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       <div *ngIf="numer == -2 &&  codes == 0">
@@ -277,7 +241,6 @@
                     <input style="width: 40px;" type="number" class="form-control" name="Subject_number"
                       [(ngModel)]="subject.Subject_number" #Subject_number="ngModel">
                   </p>
-
                 </div>
 
                 <div class="form-group">
@@ -292,14 +255,14 @@
               <div class="form-group">
                 <span>Podsumowanie zajęć:</span><br>
                 <textarea type="text" class="form-control" name="Subject_summary" required
-                  [(ngModel)]="subject.Subject_summary" #Subject_name="ngModel"></textarea>
+                  [(ngModel)]="subject.Subject_summary" #Subject_summary="ngModel"></textarea>
 
               </div>
               <br>
               <div class="form-group">
                 <span>Wyzwanie domowe:</span><br>
                 <textarea type="text" class="form-control" name="Subject_homework" required
-                  [(ngModel)]="subject.Subject_homework" #Subject_name="ngModel"></textarea>
+                  [(ngModel)]="subject.Subject_homework" #Subject_homework="ngModel"></textarea>
 
               </div>
 
@@ -317,22 +280,11 @@
                 </ul>
 
               </div>
-
-
-
             </form>
           </div>
         </fieldset>
 
       </div>
-
-
-
-
-
-
-
-
 
 
       <hr style="margin-top:100px">
@@ -344,14 +296,5 @@
 
   </div>
 </div>
-
-
-
-
-
-
-
-
-
 
 <router-outlet></router-outlet>

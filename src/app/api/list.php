@@ -1,7 +1,8 @@
 <?php
 /**
- * Returns the list of cars.
- */header('Access-Control-Allow-Origin: *');
+ * Returns the list of subjects.
+ */
+header('Access-Control-Allow-Origin: *');
 require 'connect.php';
     
 $cars = [];

@@ -8,9 +8,7 @@ import { Router } from '@angular/router';
 })
 export class PortfolioComponent {
   FULL_NAME = "Krystian Osiński";
-  PROFESSION ="Instruktor programowania";
-  COMPANY_NAME ="Education-IT";
-
-
+  PROFESSION = "Instruktor programowania";
+  COMPANY_NAME = "Education-IT";
 }
 

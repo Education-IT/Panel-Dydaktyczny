@@ -15,7 +15,6 @@ h1 {
     font-style: italic;
     letter-spacing: 3px;
     text-align: center;
-
 }
 
 hr {
@@ -32,10 +31,7 @@ a:link {
 }
 
 a:hover {
-
-
     text-decoration: underline;
-
 }
 
 a:active {
@@ -79,7 +75,6 @@ button {
 }
 
 button:hover {
-    
     background-color: #121227;
     color: #fefefe;
 }
@@ -98,9 +93,7 @@ button:hover {
 
 
 .buttons {
-
     display: flex;
-
 }
 
 .left_button {
@@ -114,9 +107,7 @@ button:hover {
 
 .right_button {
     width: 49%;
-
     text-align: center;
-
 }
 
 .link_indexhtml {
@@ -128,14 +119,12 @@ button:hover {
 #dane_kontaktowe {
     margin-top: 20px;
     margin-bottom: 20px;
-
 }
 
 footer {
     margin-top: 18px;
     color: #121227;
     display: flex;
-
 }
 
 

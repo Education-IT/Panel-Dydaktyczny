@@ -1,14 +1,4 @@
 <div class="BODY">
-
-  <!--<div *ngIf="error">{{error}}</div>
-<div *ngIf="success">{{success}}</div>
-<div id="theList">
-  <h2 style="color: aliceblue;">The list:</h2>
-  <ul>
-    <li style="color:azure;" *ngFor="let item of subjetcs">{{item.Subject_summary}} <br> {{item.Subject_homework}} <br> {{item.Subject_name}}</li>
-  </ul>
-</div>
--->
   <div id="head" class="main" style="height: 152.4vh">
     <div class="menu">
       <h2 id="logo"><a routerLink="../portfolio">Menu</a></h2>
@@ -25,50 +15,45 @@
       <div *ngIf="numer != -1 && numer!=ile">
         <fieldset>
           <legend> Podsumowanie </legend>
-        <h2 id="imie_nazwisko">{{subjetcs[numer].Subject_number}}. {{subjetcs[numer].Subject_name}}</h2>
-        <br>
-        <span>Streszczenie zajęć:</span>
+          <h2 id="imie_nazwisko">{{subjetcs[numer].Subject_number}}. {{subjetcs[numer].Subject_name}}</h2>
+          <br>
+          <span>Streszczenie zajęć:</span>
 
-        <div class="summary">
-          <pre><p>{{subjetcs[numer].Subject_summary}}</p></pre>
-        </div>
+          <div class="summary">
+            <pre><p>{{subjetcs[numer].Subject_summary}}</p></pre>
+          </div>
 
-        <br><br>
+          <br><br>
 
-        <span>Wyzwanie domowe:</span>
-        <div class="homework">
-          <pre><p>{{subjetcs[numer].Subject_homework}}</p></pre>
-        </div>
-        <div class="gif" *ngIf="url != undefined"><img src="{{url}}"></div>
-</fieldset>
+          <span>Wyzwanie domowe:</span>
+          <div class="homework">
+            <pre><p>{{subjetcs[numer].Subject_homework}}</p></pre>
+          </div>
+          <div class="gif" *ngIf="url != undefined"><img src="{{url}}"></div>
+        </fieldset>
       </div>
-
-
 
 
       <div *ngIf="numer == ile">
         <fieldset>
           <legend> Podsumowanie </legend>
-        <h2 id="imie_nazwisko">{{subjetcs[ile].Subject_number}}. {{subjetcs[ile].Subject_name}}</h2>
-        <br>
-        <span>Streszczenie zajęć:</span>
+          <h2 id="imie_nazwisko">{{subjetcs[ile].Subject_number}}. {{subjetcs[ile].Subject_name}}</h2>
+          <br>
+          <span>Streszczenie zajęć:</span>
 
-        <div class="summary">
-          <pre><p>{{subjetcs[ile].Subject_summary}}</p></pre>
-        </div>
+          <div class="summary">
+            <pre><p>{{subjetcs[ile].Subject_summary}}</p></pre>
+          </div>
 
-        <br><br>
+          <br><br>
 
-        <span>Wyzwanie domowe:</span>
-        <div class="homework">
-          <pre><p>{{subjetcs[ile].Subject_homework}}</p></pre>
-        </div>
-        <div class="gif" *ngIf="url != undefined"><img src="{{url}}"></div>
-</fieldset>
+          <span>Wyzwanie domowe:</span>
+          <div class="homework">
+            <pre><p>{{subjetcs[ile].Subject_homework}}</p></pre>
+          </div>
+          <div class="gif" *ngIf="url != undefined"><img src="{{url}}"></div>
+        </fieldset>
       </div>
-
-
-
 
       <div *ngIf="numer == -1 &&  codes == 0">
         <h2 id="imie_nazwisko">Gotowe programy w języku:</h2>
@@ -93,30 +78,37 @@
         <h2 id="imie_nazwisko">Gotowe programy w języku MakeCode:</h2>
         <br>
         <div class="summary">
-        <p>Podręcznik 2:</p>
-        <ol>
+          <p>Podręcznik 2:</p>
+          <ol>
             <li><a href="../../assets/MakeCode/MakeCode-agentRace.mkcd" download>Wyścigi Agentów</a></li>
             <li><a href="../../assets/MakeCode/MakeCode-babaJaga.mkcd" download>Raz, dwa, trzy - baba Jaga
-                    patrzy!</a></li>
+                patrzy!</a></li>
             <li><a href="../../assets/MakeCode/MakeCode-chickenHunt.mkcd" download>Chicken Hunt</a></li>
             <li><a href="../../assets/MakeCode/MakeCode-fallGuys.mkcd" download>Fall Guys</a></li>
             <li><a href="../../assets/MakeCode/MakeCode-metropolia.mkcd" download>Nasza Metropolia</a></li>
             <li><a href="../../assets/MakeCode/MakeCode-parkour.mkcd" download>Parkour</a></li>
             <li><a href="../../assets/MakeCode/MakeCode-wulkan.mkcd" download>Wulkan</a></li>
-            <li><a href="../../assets/MakeCode/MakeCode-zegar.mkcd" download>Zegar</a></li> 
-        </ol>
-      </div></div>
+            <li><a href="../../assets/MakeCode/MakeCode-zegar.mkcd" download>Zegar</a></li>
+          </ol>
+        </div>
+      </div>
 
       <div *ngIf="numer == -1 &&  codes == 2">
         <h2 id="imie_nazwisko">Gotowe programy w języku Python:</h2>
         <br>
-        
+        <div class="summary">
+          <p>Grupa Python_001:</p>
+          <ol>
+            <li><a href="../../assets/PYTHON/funkcje.py" download>Funkcje - wprowadzenie.</a></li>
+            <li><a href="../../assets/PYTHON/klasy_obiekty_1.py" download>Klasy i Obiekty - wprowadzenie</a></li>
+            <li><a href="../../assets/PYTHON/klasy_obiekty2.py" download>Klasy i Obiekty - funkcja __init__</a></li>
+            
+          </ol>
+        </div>
 
       </div>
 
-
       <hr style="margin-top:100px">
-
 
     </div>
   </div>
