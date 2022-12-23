@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NasaService } from '../services/nasa.service';
-import { AUTH_TOKEN_KEY, AUTH_TOKEN_VALUE, LocalStorageService } from '../services/local-storage.service';
+import { NasaService } from '../nasa.service';
+import { AUTH_TOKEN_KEY, AUTH_TOKEN_VALUE, LocalStorageService } from '../local-storage.service';
 import { Router } from '@angular/router';
 
 
