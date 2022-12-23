@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from '../subject';
-import { SubjectService } from '../services/subject.service';
+import { SubjectService } from '../subject.service';
 import { NgForm } from '@angular/forms';
-import { LocalStorageService } from '../services/local-storage.service';
-import { AUTH_TOKEN_KEY } from '../services/local-storage.service';
+import { LocalStorageService } from '../local-storage.service';
+import { AUTH_TOKEN_KEY } from '../local-storage.service';
 import { Router } from '@angular/router';
 
 @Component({

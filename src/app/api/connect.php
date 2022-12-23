@@ -4,7 +4,7 @@ header('Access-Control-Allow-Origin: *');
 
 define('DB_HOST', 'education-it.pl');
 define('DB_USER', 'u184503022_EducationIT');
-define('DB_PASS', 'Nemanaja1999');
+define('DB_PASS', 'root');
 define('DB_NAME', 'u184503022_EducationIT');
 
 
