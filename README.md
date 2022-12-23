@@ -29,6 +29,7 @@ Umożliwia rodzicom czy uczniom wysłanie w prosty sposób maila do mnie poprzez
 
 3) **Panel widoku ucznia:**
 -> Wyświetlenie uczniowi wszystkich tematów dotychczasowo dodanych podsumowań lekcji.
+-> Na samym początku zawsze wyswitla materiał z ostatniej lekcji!
 -> Możliwość wyboru wyświetlenia zawartości interesującego ucznia podsumowania lekcji.
 -> Przycisk umożliwiający uczniowi wielokrotne wygenerowanie losowego GIF'a za pomocą API firmy GIPHY. Giphy są losowane na podstawie wylosowanego tagu ze stworzonej przeze mnie listy.
 -> Możliwość pobrania gotowych programów w języku MakeCode i Python dodanych ręcznie na serwer przez nauczyciela.
