@@ -30,17 +30,18 @@ Umożliwia rodzicom czy uczniom wysłanie w prosty sposób maila do mnie poprzez
 3) **Panel widoku ucznia:**
 -> Wyświetlenie uczniowi wszystkich tematów dotychczasowo dodanych podsumowań lekcji.
 -> Możliwość wyboru wyświetlenia zawartości interesującego ucznia podsumowania lekcji.
--> Przycisk umożliwiający uczniowi wielokrotne wygenerowanie losowego GIF'a za pomocą API firmy GIPHY. Giphy są losowane na podstawie wylosowanego tagu z stworzonej przeze mnie listy.
--> Możliwość pobrania gotowych programów w języku MakeCode i Python dodanych ręcznie na serwer przez    	   nauczyciela.
+-> Przycisk umożliwiający uczniowi wielokrotne wygenerowanie losowego GIF'a za pomocą API firmy GIPHY. Giphy są losowane na podstawie wylosowanego tagu ze stworzonej przeze mnie listy.
+-> Możliwość pobrania gotowych programów w języku MakeCode i Python dodanych ręcznie na serwer przez nauczyciela.
  
 4) **Strona Logowania:**
--> Pobierane jest zdjęcie oraz przypisane do niego dane za pośrednictwem API firmy NASA. Codziennie umieszczane jest inne zdjęcie wraz z jego opisem. 
--> Zamockowane Logowanie - wykorzystujące local-storage,
+-> Pobierane jest zdjęcie oraz przypisane do niego dane (tytuł i opis) za pośrednictwem API firmy NASA. Codziennie umieszczane są nowe treści. 
+-> Zamockowane Logowanie - wykorzystujące local-storage. Tylko użytkownicy z tokenem mają możliwość przejścia do panelu dydaktycznego nauczyciela.
 
 5) **Panel dydaktyczny nauczyciela:**
 -> Wyświetlanie i funkcjonalności takie same jak w panelu widoku ucznia z wyłączeniem przycisku generującego GIF'y.
 -> Możliwość dodania nowych podsumowań lekcji za pośrednictwem formularzy na stronie.
 -> Możliwość usuwania oraz aktualizowania dotychczasowo stworzonych podsumowań lekcji.
+-> Możliwość wylogowania się. Usunięcie tokena, powrót do strony głównej.
  
 
 **Wymagania pozafunkcjonalne:**
