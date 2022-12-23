@@ -15,11 +15,11 @@
 
 .BODY {
     background-color: #bdbbc6;
+    height: 220vh;
 }
 
 .main {
     width: 100%;
-    height: 107.4vh;
     display: flex;
     text-align: center;
 
@@ -308,4 +308,8 @@ fieldset {
 
 .container p {
     margin-left: 0px;
+}
+
+.green:active {
+    background-color: #025d06;
 }

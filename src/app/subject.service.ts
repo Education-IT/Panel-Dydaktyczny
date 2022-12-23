@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Subject } from './subject';
-
+// https://phpenthusiast.com/blog/develop-angular-php-app-getting-the-list-of-items
 @Injectable({
   providedIn: 'root'
 })

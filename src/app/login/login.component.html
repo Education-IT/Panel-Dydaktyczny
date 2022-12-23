@@ -1,1 +1,25 @@
-<div class="gif" *ngIf="url != undefined"><img src="{{url}}"></div>
+<fieldset>
+    <legend>Logowanie do Panelu Dydaktycznego:</legend>
+<form action="/action_page.php" method="post">
+  <div class="imgcontainer">
+    <div *ngIf="url != undefined"><img src="{{url}}">
+    <p class="title"><span>Title:</span> {{dataNASA.title}}</p>
+    <p><span>Explanation:</span></p>
+    <p class="exp">{{dataNASA.explanation}}</p>
+  </div></div>
+  
+  
+  <div class="container">
+
+    <p><input type="text" placeholder="Enter Username" name="uname" required></p>
+    <p><input type="password" placeholder="Enter Password" name="psw" required></p>  
+    <p><button type="submit">Login</button></p>
+    <button routerLink="../portfolio" type="button" class="cancelbtn">Cancel</button>
+  </div>
+
+ 
+    
+   
+  
+</form>
+</fieldset>

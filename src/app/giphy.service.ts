@@ -8,7 +8,7 @@ export class GiphyService {
 
   constructor(private http: HttpClient) { }
 
-tags = ['kittens' , 'puppies' , 'funny+cat' , 'funny+dog', 'coding'];
+tags = ['kittens' , 'puppies' , 'funny+cat' , 'funny+dog', 'funny+animals'];
 API_KEY ='EWGZQnPkD4jicgLIXe61hXfiluLkRK7d';
 base_URL = 'https://api.giphy.com/v1/gifs/random?api_key=';
 

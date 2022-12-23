@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit{
       this.dataNASA = data;
       console.log(this.dataNASA);
       this.url = this.dataNASA.url;
-      console.log(this.url);
+      
     });
   }
 
