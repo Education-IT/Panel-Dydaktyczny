@@ -3,8 +3,7 @@
 ## Projekt zaliczeniowy na przedmiot - ***Języki programowania JavaScript*** - **UAM**
 
 > **Zrealizowano w piątym semestrze studiów informatycznych.**
-
-Projekt ten jest na co dzień przeze mnie wykorzystywany do pracy dydaktycznej z dziećmi i młodzieżą. Służy mi głównie, jako idealne centrum niezbędnych materiałów czy programów jakie to młodzi uczniowie (pracujący na firmowych laptopach) mogą szybko i z łatwością pobrać je, czy to na zajęciach czy w domu. Starsi uczniowie natomiast, których to aktualnie uczę podstaw języka Python - otrzymują dostęp do skonsolidowanej wiedzy, podsumowania każdej z lekcji oraz linki do filmów na YouTube czy wyzwania domowe. 
+Wynik tego projektu jest na co dzień przeze mnie wykorzystywany do pracy dydaktycznej z dziećmi i młodzieżą. Służy mi głównie, jako idealne centrum niezbędnych materiałów czy programów jakie to młodzi uczniowie (pracujący na firmowych laptopach) mogą szybko i z łatwością pobrać, czy to na zajęciach czy w domu. Starsi uczniowie natomiast, których to aktualnie uczę podstaw języka Python - otrzymują dostęp do skonsolidowanej wiedzy; podsumowania każdej z lekcji oraz linki do filmów na YouTube oraz wyzwania domowe. 
 
 Moja strona zawiera również proste REST API. umożliwiające mi działania CRUD na bazie danych. Backend aplikacji napisany jest w języku PHP.   
 
