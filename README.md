@@ -1,60 +1,59 @@
+![Project Banner](https://raw.githubusercontent.com/Education-IT/Panel-Dydaktyczny/main/images/banner.png)
+## Course Project - *JavaScript Programming Languages* - **UAM**
 
-![enter image description here](https://raw.githubusercontent.com/Education-IT/Panel-Dydaktyczny/main/images/banner.png)
-## Projekt zaliczeniowy na przedmiot - ***Języki programowania JavaScript*** - **UAM**
+> **Completed in the fifth semester of computer science studies.**
 
-> **Zrealizowano w piątym semestrze studiów informatycznych.**
+The result of this project is used by me on a daily basis for educational purposes with children and young people. It serves as an ideal center for essential materials and programs that young students (working on company laptops) can quickly and easily download, whether in class or at home. Older students, whom I am currently teaching the basics of the Python language, have access to consolidated knowledge: summaries of each lesson, links to YouTube videos, and homework challenges.
 
-Wynik tego projektu jest na co dzień przeze mnie wykorzystywany do pracy dydaktycznej z dziećmi i młodzieżą. Służy mi głównie, jako idealne centrum niezbędnych materiałów czy programów jakie to młodzi uczniowie (pracujący na firmowych laptopach) mogą szybko i z łatwością pobrać, czy to na zajęciach czy w domu. Starsi uczniowie natomiast, których to aktualnie uczę podstaw języka Python - otrzymują dostęp do skonsolidowanej wiedzy; podsumowania każdej z lekcji oraz linki do filmów na YouTube oraz wyzwania domowe. 
+My website also includes a simple REST API that allows me to perform CRUD operations on a database. The backend of the application is written in PHP.
 
-Moja strona zawiera również proste REST API. umożliwiające mi działania CRUD na bazie danych. Backend aplikacji napisany jest w języku PHP.   
+I also consider the website as a modest portfolio. Feel free to visit it -> [![MyWebSite](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://education-it.pl/) <-
 
-Stronę traktuję również jako skromną wizytówkę. Zapraszam do odwiedzenia -> [ ![MyWebSite](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://education-it.pl/) <-
+It enables parents or students to easily send me an email through the form on the website.
 
-Umożliwia rodzicom czy uczniom wysłanie w prosty sposób maila do mnie poprzez formularz na stronie.
+**Technology Stack:**
 
-**Stos technologiczny:**
-
-![Angular](https://img.shields.io/badge/Angular-DD0031.svg?style=for-the-badge&logo=Angular&logoColor=white) ![TypeScript](https://img.shields.io/badge/PHP-777BB4.svg?style=for-the-badge&logo=PHP&logoColor=white) ![PHP](https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white) ![SQL](https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=MySQL&logoColor=white) ![PHPmyAdmin](https://img.shields.io/badge/phpMyAdmin-6C78AF.svg?style=for-the-badge&logo=phpMyAdmin&logoColor=white) ![HTML](https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white) [ ![enter image description here](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://education-it.pl/)
+![Angular](https://img.shields.io/badge/Angular-DD0031.svg?style=for-the-badge&logo=Angular&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-777BB4.svg?style=for-the-badge&logo=PHP&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white) ![SQL](https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=MySQL&logoColor=white) ![phpMyAdmin](https://img.shields.io/badge/phpMyAdmin-6C78AF.svg?style=for-the-badge&logo=phpMyAdmin&logoColor=white) ![HTML](https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white) [![MyWebSite](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://education-it.pl/)
 
 
-## Specyfikacja:
- **Wymagania funkcjonalne:**
-1) **Strona startowa:**
--> Możliwość pobrania CV dydaktyka.
--> Możliwość przekierowania się do innych widoków aplikacji z poziomu strony startowej.
--> Możliwość przekierowania się do innych stron: takich jak GitHub, LinkedIn, Facebook.
+## Specification:
+ **Functional Requirements:**
+1) **Home Page:**
+-> Ability to download the teacher's CV.
+-> Ability to navigate to other views within the application from the home page.
+-> Ability to navigate to external websites such as GitHub, LinkedIn, and Facebook.
 
-2) **Strona kontaktowa:**
--> Możliwość napisania e-maila prosto ze strony internetowej.
+2) **Contact Page:**
+-> Ability to send an email directly from the website.
 
-3) **Panel widoku ucznia:**
--> Wyświetlenie uczniowi wszystkich tematów dotychczasowo dodanych podsumowań lekcji.
--> Na samym początku zawsze wyswitla materiał z ostatniej lekcji!
--> Możliwość wyboru wyświetlenia zawartości interesującego ucznia podsumowania lekcji.
--> Przycisk umożliwiający uczniowi wielokrotne wygenerowanie losowego GIF'a za pomocą API firmy GIPHY. Giphy są losowane na podstawie wylosowanego tagu ze stworzonej przeze mnie listy.
--> Możliwość pobrania gotowych programów w języku MakeCode i Python dodanych ręcznie na serwer przez nauczyciela.
+3) **Student View Panel:**
+-> Display all the lesson summaries added so far to the students.
+-> Always display the material from the latest lesson first.
+-> Ability for the student to select and display the content of the desired lesson summary.
+-> Button to generate random GIFs using the GIPHY company's API based on a randomly selected tag from my predefined list.
+-> Ability to download ready-made programs in MakeCode and Python, manually added to the server by the teacher.
+
+4) **Login Page:**
+-> Retrieve an image and associate it with data (title and description) through the NASA API. New content is added daily.
+-> Mock login using local storage. Only users with a valid token can access the teacher's educational panel.
+
+5) **Teacher's Educational Panel:**
+-> Display and functionality identical to the student view panel, excluding the button for generating GIFs.
+-> Ability to add new lesson summaries through forms on the website.
+-> Ability to delete and update previously created lesson summaries.
+-> Ability to log out. Remove the token and return to the home page.
  
-4) **Strona Logowania:**
--> Pobierane jest zdjęcie oraz przypisane do niego dane (tytuł i opis) za pośrednictwem API firmy NASA. Codziennie umieszczane są nowe treści. 
--> Zamockowane Logowanie - wykorzystujące local-storage. Tylko użytkownicy z tokenem mają możliwość przejścia do panelu dydaktycznego nauczyciela.
 
-5) **Panel dydaktyczny nauczyciela:**
--> Wyświetlanie i funkcjonalności takie same jak w panelu widoku ucznia z wyłączeniem przycisku generującego GIF'y.
--> Możliwość dodania nowych podsumowań lekcji za pośrednictwem formularzy na stronie.
--> Możliwość usuwania oraz aktualizowania dotychczasowo stworzonych podsumowań lekcji.
--> Możliwość wylogowania się. Usunięcie tokena, powrót do strony głównej.
- 
+**Non-functional Requirements:**
+1) The page should load in less than 1 second.
+2) The page should be hosted on a server other than local. + The page should be served using the HTTP protocol encrypted with the TLS protocol (HTTPS).
+3) The page should have a REST API implemented in PHP.
 
-**Wymagania pozafunkcjonalne:**
-1) Strona powinna się załadować w mniej niż 1 sekundę.
-2) Strona powinna być opublikowana na serwerze innym niż lokalnym. + Strona powinna być uruchamiana za pomocą protokołu http -  szyfrowanym za pomocą protokołu TLS (https)
-3) Strona powinna mieć zaimplementowane REST API w języku PHP.
+**Potential Users:**
+* Various educators, such as teachers, tutors, instructors, or lecturers.
+* Students / clients of the above-mentioned educators.
 
-**Potencjalni odbiorcy:**
-* Wszelkiego rodzaju dydaktycy. Tacy jak np.: nauczyciele, korepetytorzy, instruktorzy czy wykładowcy.
-* Uczniowie / klienci - osób wymienionych powyżej.
-
-**Potencjalne korzyści dla użytkowników:**
-* Łatwość i prostota w skonsolidowanym dostępie i udostępnianiu materiałów dydaktycznych. (podsumowania lekcji, przydatnych linków, gotowych programów i wyzwań domowych. )
-* Strona promocyjna.
-* Łatwość w przekazywaniu uczniom w trakcie zajęć plików na których będą pracować. Możliwość pobrania ich ze strony internetowej nauczyciela.
+**Potential Benefits for Users:**
+* Ease and simplicity in consolidated access to educational materials (lesson summaries, useful links, ready-made programs, and homework challenges).
+* Promotional website.
+* Ease of sharing files with students during classes. Students can download files from the teacher's website.
